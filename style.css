@@ -1,0 +1,150 @@
+@import url();
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+body {
+  font-size: 16px;
+  font-family: sans-serif;
+  display: inline;
+  background-color: var(--LightGray);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10%;
+}
+
+.community,
+.subscription,
+.why {
+  padding: 10% 5%;
+}
+
+.community {
+  background-color: #fff;
+}
+
+.subscription {
+  background-color: var(--Cyan);
+}
+
+.why {
+  background-color: var(--Cyan);
+  opacity: 0.7;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 7%;
+}
+
+.community .title {
+  color: var(--Cyan);
+}
+
+.community .sub-title {
+  color: var(--BrightYellow);
+  font-size: 18px;
+  padding-bottom: 7%;
+}
+
+.subscription .title,
+.why .title,
+.subscription .sub-title {
+  color: #fff;
+}
+
+.subscription .sub-title {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  display: flex;
+  padding-bottom: 2%;
+}
+
+.span {
+  font-size: 15px;
+  font-weight: 200;
+  color: var(--LightGray);
+  opacity: 0.6;
+  margin: auto;
+  padding-left: 5%;
+}
+
+.subscription .text {
+  color: var(--LightGray);
+  opacity: 0.7;
+  padding-bottom: 7%;
+}
+
+button {
+  color: #fff;
+  background-color: var(--BrightYellow);
+  border: none;
+  padding: 5%;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 5px;
+  margin: 5% 0% 3%;
+}
+
+button:hover {
+  opacity: 0.7;
+  transition: ease-in-out 0.5s all;
+}
+
+.text {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--GrayishBlue);
+  line-height: 1.5rem;
+}
+
+.list {
+  color: #fff;
+  opacity: 0.7;
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 801px) {
+  .main {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .community {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .community,
+  .subscription,
+  .why {
+    padding: 5%;
+  }
+
+  .community .title,
+  .community .sub-title {
+    padding-bottom: 3%;
+  }
+}
+
+/**Weights: 400, 700*/
